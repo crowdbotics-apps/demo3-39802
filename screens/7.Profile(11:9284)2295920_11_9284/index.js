@@ -1,56 +1,29 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_11_9304}>
         <View style={styles.View_I11_9304_11_9017}>
           <View style={styles.View_I11_9304_68_29233}>
             <View style={styles.View_I11_9304_68_29234}>
               <View style={styles.View_I11_9304_68_29235}>
-                <ImageBackground
-                  source={{
-                    uri:
-                      "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8e7326c8-b085-43aa-8cb8-1d652fa7c48b"
-                  }}
-                  style={styles.ImageBackground_I11_9304_68_29236}
-                />
+                <ImageBackground source={{
+                uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8e7326c8-b085-43aa-8cb8-1d652fa7c48b"
+              }} style={styles.ImageBackground_I11_9304_68_29236} />
               </View>
-              <ImageBackground
-                source={{
-                  uri:
-                    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b3cfe686-aab8-4904-9952-12f40a8e2623"
-                }}
-                style={styles.ImageBackground_I11_9304_68_29242}
-              />
+              <ImageBackground source={{
+              uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b3cfe686-aab8-4904-9952-12f40a8e2623"
+            }} style={styles.ImageBackground_I11_9304_68_29242} />
             </View>
             <View style={styles.View_I11_9304_68_29250}>
               <Text style={styles.Text_I11_9304_68_29250}>BUSINESS NAME</Text>
@@ -68,18 +41,10 @@ export class Blank extends React.Component {
                   <View style={styles.View_I11_9304_11_9027_11_8847}>
                     <View style={styles.View_I11_9304_11_9027_11_8848} />
                     <View style={styles.View_I11_9304_11_9027_11_8857}>
-                      <View
-                        style={styles.View_I11_9304_11_9027_11_8857_10_3165}
-                      >
-                        <ImageBackground
-                          source={{
-                            uri:
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2bae4599-0cb3-4659-a5a0-6d8fe70a5a31"
-                          }}
-                          style={
-                            styles.ImageBackground_I11_9304_11_9027_11_8857_10_3166
-                          }
-                        />
+                      <View style={styles.View_I11_9304_11_9027_11_8857_10_3165}>
+                        <ImageBackground source={{
+                        uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2bae4599-0cb3-4659-a5a0-6d8fe70a5a31"
+                      }} style={styles.ImageBackground_I11_9304_11_9027_11_8857_10_3166} />
                       </View>
                     </View>
                   </View>
@@ -92,13 +57,9 @@ export class Blank extends React.Component {
                   </View>
                   <View style={styles.View_I11_9304_25_4093_11_8841}>
                     <View style={styles.View_I11_9304_25_4093_11_8842} />
-                    <ImageBackground
-                      source={{
-                        uri:
-                          "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a3ddacd7-0b0e-4de5-a80a-06369566ec80"
-                      }}
-                      style={styles.ImageBackground_I11_9304_25_4093_11_8884}
-                    />
+                    <ImageBackground source={{
+                    uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a3ddacd7-0b0e-4de5-a80a-06369566ec80"
+                  }} style={styles.ImageBackground_I11_9304_25_4093_11_8884} />
                   </View>
                 </View>
                 <View style={styles.View_I11_9304_68_15186}>
@@ -110,18 +71,10 @@ export class Blank extends React.Component {
                   <View style={styles.View_I11_9304_68_15186_11_8841}>
                     <View style={styles.View_I11_9304_68_15186_11_8842} />
                     <View style={styles.View_I11_9304_68_15186_11_8884}>
-                      <View
-                        style={styles.View_I11_9304_68_15186_11_8884_68_14372}
-                      >
-                        <ImageBackground
-                          source={{
-                            uri:
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/99fd2e3b-dbff-4816-bec0-12ad8ac3de41"
-                          }}
-                          style={
-                            styles.ImageBackground_I11_9304_68_15186_11_8884_68_14373
-                          }
-                        />
+                      <View style={styles.View_I11_9304_68_15186_11_8884_68_14372}>
+                        <ImageBackground source={{
+                        uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/99fd2e3b-dbff-4816-bec0-12ad8ac3de41"
+                      }} style={styles.ImageBackground_I11_9304_68_15186_11_8884_68_14373} />
                       </View>
                     </View>
                   </View>
@@ -135,15 +88,9 @@ export class Blank extends React.Component {
                   <View style={styles.View_I11_9304_68_15187_11_8841}>
                     <View style={styles.View_I11_9304_68_15187_11_8842} />
                     <View style={styles.View_I11_9304_68_15187_11_8884}>
-                      <ImageBackground
-                        source={{
-                          uri:
-                            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f3a87940-d04b-4996-b4c3-e33fd16f291e"
-                        }}
-                        style={
-                          styles.ImageBackground_I11_9304_68_15187_11_8884_68_12046
-                        }
-                      />
+                      <ImageBackground source={{
+                      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f3a87940-d04b-4996-b4c3-e33fd16f291e"
+                    }} style={styles.ImageBackground_I11_9304_68_15187_11_8884_68_12046} />
                     </View>
                   </View>
                 </View>
@@ -152,13 +99,9 @@ export class Blank extends React.Component {
                 <Text style={styles.Text_I11_9304_11_9032}>GENERAL</Text>
               </View>
             </View>
-            <ImageBackground
-              source={{
-                uri:
-                  "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6976dc31-915a-431a-9d99-d7b48a2f4883"
-              }}
-              style={styles.ImageBackground_I11_9304_11_9040}
-            />
+            <ImageBackground source={{
+            uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6976dc31-915a-431a-9d99-d7b48a2f4883"
+          }} style={styles.ImageBackground_I11_9304_11_9040} />
             <View style={styles.View_I11_9304_16_1105}>
               <View style={styles.View_I11_9304_16_1106}>
                 <View style={styles.View_I11_9304_16_1109}>
@@ -170,18 +113,10 @@ export class Blank extends React.Component {
                   <View style={styles.View_I11_9304_16_1109_11_8841}>
                     <View style={styles.View_I11_9304_16_1109_11_8842} />
                     <View style={styles.View_I11_9304_16_1109_11_8884}>
-                      <View
-                        style={styles.View_I11_9304_16_1109_11_8884_10_3138}
-                      >
-                        <ImageBackground
-                          source={{
-                            uri:
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fb30a470-c356-4cce-9f9d-f37bcbd40956"
-                          }}
-                          style={
-                            styles.ImageBackground_I11_9304_16_1109_11_8884_10_3139
-                          }
-                        />
+                      <View style={styles.View_I11_9304_16_1109_11_8884_10_3138}>
+                        <ImageBackground source={{
+                        uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fb30a470-c356-4cce-9f9d-f37bcbd40956"
+                      }} style={styles.ImageBackground_I11_9304_16_1109_11_8884_10_3139} />
                       </View>
                     </View>
                   </View>
@@ -196,15 +131,9 @@ export class Blank extends React.Component {
                     <View style={styles.View_I11_9304_16_1110_11_8842} />
                     <View style={styles.View_I11_9304_16_1110_11_8884}>
                       <View style={styles.View_I11_9304_16_1110_11_8884_16_994}>
-                        <ImageBackground
-                          source={{
-                            uri:
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/20e27d24-5bc2-429e-af08-128d85162c56"
-                          }}
-                          style={
-                            styles.ImageBackground_I11_9304_16_1110_11_8884_16_995
-                          }
-                        />
+                        <ImageBackground source={{
+                        uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/20e27d24-5bc2-429e-af08-128d85162c56"
+                      }} style={styles.ImageBackground_I11_9304_16_1110_11_8884_16_995} />
                       </View>
                     </View>
                   </View>
@@ -218,18 +147,10 @@ export class Blank extends React.Component {
                   <View style={styles.View_I11_9304_16_1112_11_8841}>
                     <View style={styles.View_I11_9304_16_1112_11_8842} />
                     <View style={styles.View_I11_9304_16_1112_11_8884}>
-                      <View
-                        style={styles.View_I11_9304_16_1112_11_8884_16_1089}
-                      >
-                        <ImageBackground
-                          source={{
-                            uri:
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d8703bab-f0f6-4ec0-a9af-b079eebf6723"
-                          }}
-                          style={
-                            styles.ImageBackground_I11_9304_16_1112_11_8884_16_1090
-                          }
-                        />
+                      <View style={styles.View_I11_9304_16_1112_11_8884_16_1089}>
+                        <ImageBackground source={{
+                        uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d8703bab-f0f6-4ec0-a9af-b079eebf6723"
+                      }} style={styles.ImageBackground_I11_9304_16_1112_11_8884_16_1090} />
                       </View>
                     </View>
                   </View>
@@ -239,13 +160,9 @@ export class Blank extends React.Component {
                 <Text style={styles.Text_I11_9304_16_1113}>ADS</Text>
               </View>
             </View>
-            <ImageBackground
-              source={{
-                uri:
-                  "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/42566167-ad28-4823-bbae-603958e8424e"
-              }}
-              style={styles.ImageBackground_I11_9304_11_9041}
-            />
+            <ImageBackground source={{
+            uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/42566167-ad28-4823-bbae-603958e8424e"
+          }} style={styles.ImageBackground_I11_9304_11_9041} />
             <View style={styles.View_I11_9304_68_23763}>
               <View style={styles.View_I11_9304_68_23764}>
                 <View style={styles.View_I11_9304_68_23765}>
@@ -256,13 +173,9 @@ export class Blank extends React.Component {
                   </View>
                   <View style={styles.View_I11_9304_68_23765_11_8841}>
                     <View style={styles.View_I11_9304_68_23765_11_8842} />
-                    <ImageBackground
-                      source={{
-                        uri:
-                          "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1d3affa5-6351-451a-b065-b582d4d38037"
-                      }}
-                      style={styles.ImageBackground_I11_9304_68_23765_11_8884}
-                    />
+                    <ImageBackground source={{
+                    uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1d3affa5-6351-451a-b065-b582d4d38037"
+                  }} style={styles.ImageBackground_I11_9304_68_23765_11_8884} />
                   </View>
                 </View>
                 <View style={styles.View_I11_9304_68_23766}>
@@ -273,13 +186,9 @@ export class Blank extends React.Component {
                   </View>
                   <View style={styles.View_I11_9304_68_23766_11_8841}>
                     <View style={styles.View_I11_9304_68_23766_11_8842} />
-                    <ImageBackground
-                      source={{
-                        uri:
-                          "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/043a8e34-03fc-4a87-8e7b-0533574c66d6"
-                      }}
-                      style={styles.ImageBackground_I11_9304_68_23766_11_8884}
-                    />
+                    <ImageBackground source={{
+                    uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/043a8e34-03fc-4a87-8e7b-0533574c66d6"
+                  }} style={styles.ImageBackground_I11_9304_68_23766_11_8884} />
                   </View>
                 </View>
               </View>
@@ -297,15 +206,9 @@ export class Blank extends React.Component {
             <View style={styles.View_I11_9304_11_9042_11_8842} />
             <View style={styles.View_I11_9304_11_9042_11_8884}>
               <View style={styles.View_I11_9304_11_9042_11_8884_16_1438}>
-                <ImageBackground
-                  source={{
-                    uri:
-                      "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4b3e3e14-a51f-48b5-8c4a-96bb8f7d1027"
-                  }}
-                  style={
-                    styles.ImageBackground_I11_9304_11_9042_11_8884_16_1439
-                  }
-                />
+                <ImageBackground source={{
+                uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4b3e3e14-a51f-48b5-8c4a-96bb8f7d1027"
+              }} style={styles.ImageBackground_I11_9304_11_9042_11_8884_16_1439} />
               </View>
             </View>
           </View>
@@ -314,13 +217,9 @@ export class Blank extends React.Component {
       <View style={styles.View_11_9420}>
         <View style={styles.View_I11_9420_11_9235}>
           <View style={styles.View_I11_9420_11_9235_451_6700}>
-            <ImageBackground
-              source={{
-                uri:
-                  "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7384823e-8853-4bdc-b548-49329188ee7f"
-              }}
-              style={styles.ImageBackground_I11_9420_11_9235_451_6701}
-            />
+            <ImageBackground source={{
+            uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7384823e-8853-4bdc-b548-49329188ee7f"
+          }} style={styles.ImageBackground_I11_9420_11_9235_451_6701} />
           </View>
         </View>
         <View style={styles.View_I11_9420_11_9236}>
@@ -341,21 +240,13 @@ export class Blank extends React.Component {
             <Text style={styles.Text_16_12747}>BASIC</Text>
           </View>
           <View style={styles.View_16_7178}>
-            <ImageBackground
-              source={{
-                uri:
-                  "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6f635442-8842-43a2-8f97-daf99700ec9b"
-              }}
-              style={styles.ImageBackground_16_7179}
-            />
+            <ImageBackground source={{
+            uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6f635442-8842-43a2-8f97-daf99700ec9b"
+          }} style={styles.ImageBackground_16_7179} />
             <View style={styles.View_16_7180}>
-              <ImageBackground
-                source={{
-                  uri:
-                    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3f57c247-94f1-4906-ac62-ce87251fc5b1"
-                }}
-                style={styles.ImageBackground_16_7181}
-              />
+              <ImageBackground source={{
+              uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3f57c247-94f1-4906-ac62-ce87251fc5b1"
+            }} style={styles.ImageBackground_16_7181} />
               <View style={styles.View_16_7182}>
                 <Text style={styles.Text_16_7182}>Take Selfie</Text>
               </View>
@@ -392,13 +283,9 @@ export class Blank extends React.Component {
             <View style={styles.View_I19_12818_19_12707}>
               <View style={styles.View_I19_12818_19_12708}>
                 <View style={styles.View_I19_12818_19_12708_451_5656}>
-                  <ImageBackground
-                    source={{
-                      uri:
-                        "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d89cf704-c70e-43ae-8d21-f3501158a244"
-                    }}
-                    style={styles.ImageBackground_I19_12818_19_12708_451_5657}
-                  />
+                  <ImageBackground source={{
+                  uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d89cf704-c70e-43ae-8d21-f3501158a244"
+                }} style={styles.ImageBackground_I19_12818_19_12708_451_5657} />
                 </View>
               </View>
               <View style={styles.View_I19_12818_19_12709}>
@@ -414,13 +301,9 @@ export class Blank extends React.Component {
               <View style={styles.View_16_12805}>
                 <View style={styles.View_16_12806}>
                   <View style={styles.View_I16_12806_8_5308} />
-                  <ImageBackground
-                    source={{
-                      uri:
-                        "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9a551de0-cb48-4c4d-8c7b-904e3eb3d0be"
-                    }}
-                    style={styles.ImageBackground_I16_12806_8_5309}
-                  />
+                  <ImageBackground source={{
+                  uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9a551de0-cb48-4c4d-8c7b-904e3eb3d0be"
+                }} style={styles.ImageBackground_I16_12806_8_5309} />
                 </View>
                 <View style={styles.View_16_12807}>
                   <Text style={styles.Text_16_12807}>Male</Text>
@@ -445,13 +328,9 @@ export class Blank extends React.Component {
             </View>
           </View>
         </View>
-        <ImageBackground
-          source={{
-            uri:
-              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d8c9dbb4-a910-4318-81db-b33284fb1b59"
-          }}
-          style={styles.ImageBackground_16_2280}
-        />
+        <ImageBackground source={{
+        uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d8c9dbb4-a910-4318-81db-b33284fb1b59"
+      }} style={styles.ImageBackground_16_2280} />
         <View style={styles.View_16_12572}>
           <View style={styles.View_16_12573}>
             <View style={styles.View_16_12644}>
@@ -460,13 +339,9 @@ export class Blank extends React.Component {
               </View>
               <View style={styles.View_16_12717}>
                 <View style={styles.View_16_12718} />
-                <ImageBackground
-                  source={{
-                    uri:
-                      "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3eb59a77-d9e0-4ab0-b5e8-878615a0b0d3"
-                  }}
-                  style={styles.ImageBackground_16_12719}
-                />
+                <ImageBackground source={{
+                uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3eb59a77-d9e0-4ab0-b5e8-878615a0b0d3"
+              }} style={styles.ImageBackground_16_12719} />
               </View>
             </View>
             <View style={styles.View_16_12729}>
@@ -475,13 +350,9 @@ export class Blank extends React.Component {
               </View>
               <View style={styles.View_16_12731}>
                 <View style={styles.View_16_12732} />
-                <ImageBackground
-                  source={{
-                    uri:
-                      "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c058791a-6695-4c8a-856b-1afe0d8493c0"
-                  }}
-                  style={styles.ImageBackground_16_12733}
-                />
+                <ImageBackground source={{
+                uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c058791a-6695-4c8a-856b-1afe0d8493c0"
+              }} style={styles.ImageBackground_16_12733} />
               </View>
             </View>
             <View style={styles.View_16_12738}>
@@ -490,13 +361,9 @@ export class Blank extends React.Component {
               </View>
               <View style={styles.View_16_12740}>
                 <View style={styles.View_16_12741} />
-                <ImageBackground
-                  source={{
-                    uri:
-                      "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/61973e6c-41d8-449a-934f-287f3daac46d"
-                  }}
-                  style={styles.ImageBackground_16_12742}
-                />
+                <ImageBackground source={{
+                uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/61973e6c-41d8-449a-934f-287f3daac46d"
+              }} style={styles.ImageBackground_16_12742} />
               </View>
             </View>
           </View>
@@ -510,13 +377,15 @@ export class Blank extends React.Component {
           </View>
         </View>
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(255, 255, 255, 1)" },
-  View_2: { height: hp("140%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(255, 255, 255, 1)"
+  },
+  View_2: {
+    height: hp("140%")
+  },
   View_11_9304: {
     width: wp("17%"),
     minWidth: wp("17%"),
@@ -2454,12 +2323,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textTransform: "none"
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);
