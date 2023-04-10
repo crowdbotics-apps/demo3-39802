@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
-  FlatList,
-  Pressable,
-  TextInput
-} from "react-native";
+import { Text, View, StyleSheet, Image, FlatList, Pressable, TextInput } from "react-native";
 
 const EventHome = () => {
   const [upcomingEvents, setUpcomingEvents] = useState([]);
@@ -16,118 +8,76 @@ const EventHome = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [user, setUser] = useState({});
   useEffect(() => {
-    setUpcomingEvents([
-      {
-        id: 1,
-        title: "Event Name 2022",
-        location: "New York, USA",
-        joined: 48,
-        image: require("./assets/eventImage-lg.png")
-      },
-      {
-        id: 2,
-        title: "Event Name 2022",
-        location: "New York, USA",
-        joined: 48,
-        image: require("./assets/eventImage-lg.png")
-      },
-      {
-        id: 3,
-        title: "Event Name 2022",
-        location: "New York, USA",
-        joined: 48,
-        image: require("./assets/eventImage-lg.png")
-      }
-    ]);
-    setEvents([
-      {
-        id: 1,
-        title: "Inster Representative Name",
-        location: "New York, USA",
-        time: "11:00 AM",
-        date: "28 Sept 2022",
-        image: require("./assets/eventImage-sm.png")
-      },
-      {
-        id: 2,
-        title: "Inster Representative Name",
-        location: "New York, USA",
-        time: "11:00 AM",
-        date: "28 Sept 2022",
-        image: require("./assets/eventImage-sm.png")
-      },
-      {
-        id: 3,
-        title: "Inster Representative Name",
-        location: "New York, USA",
-        time: "11:00 AM",
-        date: "28 Sept 2022",
-        image: require("./assets/eventImage-sm.png")
-      },
-      {
-        id: 4,
-        title: "Inster Representative Name",
-        location: "New York, USA",
-        time: "11:00 AM",
-        date: "28 Sept 2022",
-        image: require("./assets/eventImage-sm.png")
-      }
-    ]);
+    setUpcomingEvents([{
+      id: 1,
+      title: "Event Name 2022",
+      location: "New York, USA",
+      joined: 48,
+      image: require("./assets/eventImage-lg.png")
+    }, {
+      id: 2,
+      title: "Event Name 2022",
+      location: "New York, USA",
+      joined: 48,
+      image: require("./assets/eventImage-lg.png")
+    }, {
+      id: 3,
+      title: "Event Name 2022",
+      location: "New York, USA",
+      joined: 48,
+      image: require("./assets/eventImage-lg.png")
+    }]);
+    setEvents([{
+      id: 1,
+      title: "Inster Representative Name",
+      location: "New York, USA",
+      time: "11:00 AM",
+      date: "28 Sept 2022",
+      image: require("./assets/eventImage-sm.png")
+    }, {
+      id: 2,
+      title: "Inster Representative Name",
+      location: "New York, USA",
+      time: "11:00 AM",
+      date: "28 Sept 2022",
+      image: require("./assets/eventImage-sm.png")
+    }, {
+      id: 3,
+      title: "Inster Representative Name",
+      location: "New York, USA",
+      time: "11:00 AM",
+      date: "28 Sept 2022",
+      image: require("./assets/eventImage-sm.png")
+    }, {
+      id: 4,
+      title: "Inster Representative Name",
+      location: "New York, USA",
+      time: "11:00 AM",
+      date: "28 Sept 2022",
+      image: require("./assets/eventImage-sm.png")
+    }]);
     setUser({
       name: "User Name"
     });
   }, []);
-  return (
-    <View style={styles.container}>
-      <FlatList
-        style={styles.list}
-        ListHeaderComponent={() => (
-          <View>
+  return <View style={styles.container}>
+      <FlatList style={styles.list} ListHeaderComponent={() => <View>
             <Text style={styles.greetingText}>Good Morning,</Text>
             <Text style={styles.username}>{user.name}</Text>
-            <Input
-              text="Search"
-              value={search}
-              onChange={(text) => setSearch(text)}
-              containerStyle={styles.inputContainer}
-            />
+            <Input text="Search" value={search} onChange={text => setSearch(text)} containerStyle={styles.inputContainer} />
             <View style={styles.listHeader}>
               <Text style={styles.headerHeading}>Upcoming Event</Text>
               <Text style={styles.headerSubText}>View All</Text>
             </View>
-            <FlatList
-              data={upcomingEvents}
-              renderItem={({ item }) => <UpcomingEvent event={item} />}
-              keyExtractor={(item) => item.id.toString()}
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
-            />
-            <TabView
-              tabTitles={["Event", "Event", "Event", "Event"]}
-              selected={selectedTab}
-              onPress={(index) => setSelectedTab(index)}
-              style={styles.tabView}
-            />
-          </View>
-        )}
-        data={events}
-        renderItem={({ item }) => <Event event={item} />}
-        keyExtractor={(item) => item.id}
-        showsVerticalScrollIndicator={false}
-      />
-      <Footer
-        images={[
-          require("./assets/homeIconActive.png"),
-          require("./assets/starIcon.png"),
-          require("./assets/taskIcon.png"),
-          require("./assets/mapIcon.png")
-        ]}
-        titles={["Home", "Sponsors", "Tasks", "Map"]}
-        active={0}
-        activeColor="#7C7C7C"
-      />
-    </View>
-  );
+            <FlatList data={upcomingEvents} renderItem={({
+        item
+      }) => <UpcomingEvent event={item} />} keyExtractor={item => item.id.toString()} horizontal={true} showsHorizontalScrollIndicator={false} />
+            <TabView tabTitles={["Event", "Event", "Event", "Event"]} selected={selectedTab} onPress={index => setSelectedTab(index)} style={styles.tabView} />
+          </View>} data={events} renderItem={({
+      item
+    }) => <Event event={item} />} keyExtractor={item => item.id} showsVerticalScrollIndicator={false} />
+      <Footer images={[require("./assets/homeIconActive.png"), require("./assets/starIcon.png"), require("./assets/taskIcon.png"), require("./assets/mapIcon.png")]} titles={["Home", "Sponsors", "Tasks", "Map"]} active={0} activeColor="#7C7C7C" />
+    </View>;
 };
 
 const styles = StyleSheet.create({
@@ -172,10 +122,9 @@ const styles = StyleSheet.create({
     marginVertical: 10
   }
 });
-
 export default EventHome;
 
-const Footer = (props) => {
+const Footer = props => {
   const generator = props.hideTitle ? props.images : props.titles;
   const bgColor = {
     backgroundColor: props.backgroundColor ? props.backgroundColor : "#C4C4C4"
@@ -186,31 +135,14 @@ const Footer = (props) => {
   const activeColor = {
     color: props.activeColor ? props.activeColor : "#000"
   };
-  return (
-    <View style={[footerStyles.footer, bgColor]}>
-      {generator.map((title, index) => (
-        <View style={footerStyles.footerItem} key={index}>
-          <Image
-            style={footerStyles.footerImage}
-            source={props.images[index]}
-          />
-          {props.hideTitle
-            ? null
-            : (
-            <Text
-              style={[
-                titleColor,
-                footerStyles.footerItemText,
-                index === props.active ? activeColor : null
-              ]}
-            >
+  return <View style={[footerStyles.footer, bgColor]}>
+      {generator.map((title, index) => <View style={footerStyles.footerItem} key={index}>
+          <Image style={footerStyles.footerImage} source={props.images[index]} />
+          {props.hideTitle ? null : <Text style={[titleColor, footerStyles.footerItemText, index === props.active ? activeColor : null]}>
               {title}
-            </Text>
-              )}
-        </View>
-      ))}
-    </View>
-  );
+            </Text>}
+        </View>)}
+    </View>;
 };
 
 const footerStyles = StyleSheet.create({
@@ -243,57 +175,22 @@ const footerStyles = StyleSheet.create({
   }
 });
 
-const Input = (props) => {
-  return (
-    <View style={[inputStyles.inputContainer, props.containerStyle]}>
-      {props.text
-        ? (
-        <Text style={inputStyles.inputText}>{props.text}</Text>
-          )
-        : null}
+const Input = props => {
+  return <View style={[inputStyles.inputContainer, props.containerStyle]}>
+      {props.text ? <Text style={inputStyles.inputText}>{props.text}</Text> : null}
 
-      <TextInput
-        style={[
-          inputStyles.input,
-          props.style,
-          props.textArea ? inputStyles.textArea : null
-        ]}
-        placeholder={props.placeholder ? props.placeholder : "Enter"}
-        value={props.value}
-        onChangeText={(text) => props.onChange(text)}
-        placeholderTextColor={
-          props.placeholderTextColor ? props.placeholderTextColor : "#9B9B9B"
-        }
-        editable={props.editable !== false}
-        autoCapitalize="none"
-        autoCorrect={false}
-        multiline={!!props.textArea}
-      />
-      {props.errorText
-        ? (
-        <Text style={inputStyles.error}>{props.errorText}</Text>
-          )
-        : null}
-      {props.icon
-        ? (
-        <Image
-          source={props.icon}
-          style={
-            props.text ? inputStyles.iconWithText : inputStyles.iconWithoutText
-          }
-        />
-          )
-        : null}
+      <TextInput style={[inputStyles.input, props.style, props.textArea ? inputStyles.textArea : null]} placeholder={props.placeholder ? props.placeholder : "Enter"} value={props.value} onChangeText={text => props.onChange(text)} placeholderTextColor={props.placeholderTextColor ? props.placeholderTextColor : "#9B9B9B"} editable={props.editable !== false} autoCapitalize="none" autoCorrect={false} multiline={!!props.textArea} />
+      {props.errorText ? <Text style={inputStyles.error}>{props.errorText}</Text> : null}
+      {props.icon ? <Image source={props.icon} style={props.text ? inputStyles.iconWithText : inputStyles.iconWithoutText} /> : null}
       <View style={styles.children}>{props.children}</View>
-    </View>
-  );
+    </View>;
 };
 
 const inputStyles = StyleSheet.create({
   inputContainer: {
     flexDirection: "column",
-    justifyContent: "center"
-    // flex: 1
+    justifyContent: "center" // flex: 1
+
   },
   inputText: {
     fontSize: 14,
@@ -347,25 +244,11 @@ const TabView = ({
     backgroundColor: backgroundColor || "#F1F1F1"
   };
   const propStyle = style || {};
-  return (
-    <View
-      style={[tabViewStyles.paletteContainer, backgroundColorStyle, propStyle]}
-    >
-      {tabTitles.map((title, index) => (
-        <Pressable
-          onPress={() => onPress(index)}
-          style={
-            index === selected
-              ? [tabViewStyles.selected, tabColorStyle]
-              : [tabViewStyles.unSelected, backgroundColorStyle]
-          }
-          key={index}
-        >
+  return <View style={[tabViewStyles.paletteContainer, backgroundColorStyle, propStyle]}>
+      {tabTitles.map((title, index) => <Pressable onPress={() => onPress(index)} style={index === selected ? [tabViewStyles.selected, tabColorStyle] : [tabViewStyles.unSelected, backgroundColorStyle]} key={index}>
           <Text>{title}</Text>
-        </Pressable>
-      ))}
-    </View>
-  );
+        </Pressable>)}
+    </View>;
 };
 
 const tabViewStyles = StyleSheet.create({
@@ -399,9 +282,10 @@ const tabViewStyles = StyleSheet.create({
   }
 });
 
-const Event = ({ event }) => {
-  return (
-    <View style={eventStyles.container}>
+const Event = ({
+  event
+}) => {
+  return <View style={eventStyles.container}>
       <Image source={event.image} style={eventStyles.image} />
       <View style={eventStyles.content}>
         <Text style={eventStyles.title}>{event.title}</Text>
@@ -413,8 +297,7 @@ const Event = ({ event }) => {
       <Pressable style={eventStyles.btn}>
         <Text style={eventStyles.btnText}>Join</Text>
       </Pressable>
-    </View>
-  );
+    </View>;
 };
 
 const eventStyles = StyleSheet.create({
@@ -468,25 +351,22 @@ const eventStyles = StyleSheet.create({
   }
 });
 
-const UpcomingEvent = ({ event }) => {
-  return (
-    <View style={upcomingEventStyles.container}>
+const UpcomingEvent = ({
+  event
+}) => {
+  return <View style={upcomingEventStyles.container}>
       <Image source={event.image} style={upcomingEventStyles.image} />
       <View style={upcomingEventStyles.content}>
         <Text style={upcomingEventStyles.title}>{event.title}</Text>
         <Text style={upcomingEventStyles.location}>{event.location}</Text>
         <View style={upcomingEventStyles.details}>
-          <Image
-            source={require("./assets/usersJoined.png")}
-            style={upcomingEventStyles.icon}
-          />
+          <Image source={require("./assets/usersJoined.png")} style={upcomingEventStyles.icon} />
           <Text style={upcomingEventStyles.detailsText}>
             {event.joined} Joined
           </Text>
         </View>
       </View>
-    </View>
-  );
+    </View>;
 };
 
 const upcomingEventStyles = StyleSheet.create({
